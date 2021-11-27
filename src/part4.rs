@@ -5,6 +5,11 @@
 #[cfg(test)]
 mod tests {
     use super::*;
+    macro_rules! my_macro {
+        ($name:expr) => {
+            format!("{} {}", "Hello", $name);
+        };
+    }
 
     #[test]
     fn test_my_macro_world() {
